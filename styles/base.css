@@ -1,0 +1,145 @@
+/* TYPOGRAPHY: Load Google Fonts (Inter) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif; /* Use the imported font */
+    color: #333; /* Dark grey text */
+    background-color: #f8f8f8; /* Very light grey background */
+    min-height: 100vh;
+    display: flex; 
+    flex-direction: column; 
+}
+
+/* --- Header & Navigation Styles --- */
+
+header {
+    background-color: #222; /* Darker background for header */
+    color: #fff;
+    text-align: center;
+}
+
+/* Header span must display as a block */
+header span {
+    display: block; 
+    background-color: #000; /* Black for the title bar area */
+    padding: 15px 20px;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+nav {
+    /* Use CSS Flex for navigation */
+    display: flex; 
+    /* Navigation distributed all along the page */
+    justify-content: space-around; 
+    align-items: center;
+    background-color: #333; /* Dark grey nav background */
+    padding: 10px 0;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 400;
+    padding: 10px 20px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease; /* Smooth transition for hover */
+}
+
+/* Well-designed hover affect */
+nav a:hover {
+    background-color: #555; /* Medium grey on hover for contrast */
+    color: #fff;
+}
+
+/* --- Main Content Layout & Centering --- */
+
+main {
+    flex-grow: 1; 
+    padding: 20px;
+    box-sizing: border-box; 
+    
+    /* Limited width and centered horizontally */
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto; 
+    
+    /* Layout cards using CSS Grid (2 columns) */
+    display: grid; 
+    grid-template-columns: 1fr 1fr; /* Two equal columns (1 fraction unit each) */
+    gap: 20px; /* Space between the cards */
+}
+
+main h1 {
+    /* Hides the original H1 that breaks the grid layout */
+    display: none; 
+}
+
+/* --- Card Styles --- */
+
+.card {
+    background-color: #fff; /* White background for high contrast with text */
+    border: 1px solid #ddd; /* Light grey border */
+    border-radius: 8px;
+    padding: 0 0 10px 0; 
+    box-sizing: border-box;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Styling the H2 as the card header */
+.card h2 {
+    background-color: #555; /* Medium Grey for section headers */
+    color: white;
+    padding: 15px 20px;
+    margin: 0 0 15px 0; 
+    font-size: 1.3rem;
+    font-weight: 600;
+    border-radius: 8px 8px 0 0;
+}
+
+/* --- Image and Text Layout within Cards (using basic float) --- */
+
+.card img {
+    border-radius: 4px;
+    margin-bottom: 15px;
+    padding: 10px;
+}
+
+/* About Me section (Image on Right) - Targets the first section */
+main section:first-child img {
+    float: right;
+    margin: 0 20px 15px 15px;
+    max-width: 200px;
+    height: auto;
+}
+
+/* Mexico City section (Image on Left) - Targets the last section */
+main section:last-child img {
+    float: left;
+    margin: 0 15px 15px 20px;
+    max-width: 40%; 
+    height: auto;
+}
+
+.card p {
+    margin: 0;
+    padding: 0 20px; 
+    line-height: 1.6;
+    overflow: auto; /* Clears the float effect inside the card */
+}
+
+/* --- Footer Styles --- */
+
+footer {
+    background-color: #333; 
+    color: #ccc;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    margin-top: 20px; /* Space between main content and footer */
+}
+
+footer p {
+    margin: 5px 0;
+}
