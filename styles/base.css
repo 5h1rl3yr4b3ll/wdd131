@@ -1,8 +1,8 @@
 body {
     margin: 0;
     font-family: 'Inter', sans-serif; /* Use the imported font */
-    color: #333; /* Dark grey text */
-    background-color: #f8f8f8; /* Very light grey background */
+    color: rgb(51, 51, 51); /* Dark grey text */
+    background-color: rgb(248, 248, 248); /* Very light grey background */
     min-height: 100vh;
     display: flex; 
     flex-direction: column; 
@@ -11,15 +11,16 @@ body {
 /* --- Header & Navigation Styles --- */
 
 header {
-    background-color: #222; /* Darker background for header */
-    color: #fff;
+    background-color: rgb(34, 34, 34); /* Darker background for header */
+    color: rgb(255, 255, 255);
     text-align: center;
 }
 
 /* Header span must display as a block */
 header span {
     display: block; 
-    background-color: #000; /* Black for the title bar area */
+    background-color: rgb(0, 0, 0); /* Black for the title bar area */
+    color: rgb(255, 255, 255);
     padding: 15px 20px;
     font-size: 1.5rem;
     font-weight: 600;
@@ -31,12 +32,12 @@ nav {
     /* Navigation distributed all along the page */
     justify-content: space-around; 
     align-items: center;
-    background-color: #333; /* Dark grey nav background */
+    background-color: rgb(51, 51, 51); /* Dark grey nav background */
     padding: 10px 0;
 }
 
 nav a {
-    color: #fff;
+    color: rgb(255, 255, 255);
     text-decoration: none;
     font-weight: 400;
     padding: 10px 20px;
@@ -46,8 +47,8 @@ nav a {
 
 /* Well-designed hover affect */
 nav a:hover {
-    background-color: #555; /* Medium grey on hover for contrast */
-    color: #fff;
+    background-color: rgb(85, 85, 85); /* Medium grey on hover for contrast */
+    color: rgb(255, 255, 255);
 }
 
 /* --- Main Content Layout & Centering --- */
@@ -76,8 +77,8 @@ main h1 {
 /* --- Card Styles --- */
 
 .card {
-    background-color: #fff; /* White background for high contrast with text */
-    border: 1px solid #ddd; /* Light grey border */
+    background-color: rgb(255, 255, 255); /* White background for high contrast with text */
+    border: 1px solid rgb(221, 221, 221); /* Light grey border */
     border-radius: 8px;
     padding: 0 0 10px 0; 
     box-sizing: border-box;
@@ -86,8 +87,8 @@ main h1 {
 
 /* Styling the H2 as the card header */
 .card h2 {
-    background-color: #555; /* Medium Grey for section headers */
-    color: white;
+    background-color: rgb(85, 85, 85); /* Medium Grey for section headers */
+    color: rgb(255, 255, 255);
     padding: 15px 20px;
     margin: 0 0 15px 0; 
     font-size: 1.3rem;
@@ -129,8 +130,8 @@ main section:last-child img {
 /* --- Footer Styles --- */
 
 footer {
-    background-color: #333; 
-    color: #ccc;
+    background-color: rgb(51, 51, 51); 
+    color: rgb(204, 204, 204);
     text-align: center;
     padding: 20px;
     font-size: 0.9rem;
