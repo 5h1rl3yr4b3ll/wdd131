@@ -34,6 +34,7 @@ nav {
     align-items: center;
     background-color: rgb(51, 51, 51); /* Dark grey nav background */
     padding: 10px 0;
+    color: rgb(255, 255, 255);
 }
 
 nav a {
@@ -131,7 +132,7 @@ main section:last-child img {
 
 footer {
     background-color: rgb(51, 51, 51); 
-    color: rgb(204, 204, 204);
+    color: rgb(255, 255, 255);
     text-align: center;
     padding: 20px;
     font-size: 0.9rem;
