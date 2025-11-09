@@ -23,7 +23,6 @@ header {
     font-weight: 700;
 }
 
-/* Hamburger button: visible on mobile */
 .hamburger-menu {
     background: none;
     border: none;
@@ -33,7 +32,6 @@ header {
     display: block; 
 }
 
-/* Mobile-First Navigation: hidden by default */
 nav {
     display: none; 
     flex-direction: column;
@@ -56,6 +54,7 @@ nav a {
     font-weight: 600;
     padding: 15px;
     transition: background-color 0.3s;
+    /* Mobile border top */
     border-top: 1px solid rgba(255, 255, 255, 0.1); 
 }
 
@@ -82,10 +81,10 @@ h1 {
     padding-bottom: 20px;
 }
 
-/* --- MOBILE FIRST (Default: 1 Column) --- */
+/* --- CSS GRID: MOBILE FIRST (Default: 1 Column) --- */
 .figure-grid {
     display: grid;
-    /* Mobile: 1 column */
+    /* Mobile: 1 column (Default/Base Rule) */
     grid-template-columns: 1fr;
     gap: 15px; 
     padding: 10px 0;
