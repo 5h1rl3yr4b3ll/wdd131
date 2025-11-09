@@ -20,6 +20,6 @@ nav a {
 
 /* --- CSS GRID OVERRIDE --- */
 .figure-grid {
-    /* Change image grid to 3 columns on desktop screens (fixes grid-template-columns conflict) */
+    /* Change image grid to 3 columns on desktop screens */
     grid-template-columns: repeat(3, 1fr);
 }
