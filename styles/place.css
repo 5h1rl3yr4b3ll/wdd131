@@ -1,0 +1,103 @@
+/* Global CSS Variables (REQUIRED) */
+:root {
+  --primary-color: #006847; /* Deep Green, Mexico flag color */
+  --secondary-color: #73452d; /* Brown/Earth Tone for accents */
+  --accent-color: #ce1126; /* Red, Mexico flag color */
+  --text-dark: #333;
+  --text-light: white;
+  --max-width: 840px;
+  --font-family: 'Inter', sans-serif;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: #f4f4f4;
+    color: var(--text-dark);
+}
+
+header, main, footer {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+/* Header Styling */
+header {
+    background-color: var(--primary-color);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+.country-tag {
+    font-size: 35px;
+    text-align: center;
+    color: var(--text-light);
+    padding: 20px;
+    margin: 0;
+}
+.contenido {
+    width: 100%;
+    height: 10px; 
+    background-color: var(--accent-color); /* Red accent line */
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+.hero img {
+    width: 100%;         
+    object-fit: cover;
+    display: block;
+    height: auto;
+}
+
+/* Card Styling (Mobile) */
+.data-card, .weather-card {
+    margin: 20px;
+    padding: 15px;
+    background-color: var(--text-light);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.data-card h2, .weather-card h2 {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+/* Grid layout for data/weather alignment */
+.data-grid, .weather-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Mobile uses equal columns */
+    text-align: left;
+    gap: 5px 10px;
+    font-size: 1rem;
+}
+
+.data-grid p:nth-child(odd), .weather-grid p:nth-child(odd) {
+    font-weight: 600;
+}
+
+/* Mobile Weather Icon (SVG) Styling */
+.weather-icon-mobile {
+    display: block; /* Ensures it takes full line space */
+    margin: 0 auto 15px; /* Centers the icon block horizontally */
+    width: 60px;
+    height: 60px;
+}
+
+/* Footer Styling */
+footer {
+    background-color: var(--primary-color);
+    color: #ccc;
+    text-align: center;
+    font-size: 0.9rem;
+    padding: 15px 0;
+    margin-top: 20px;
+}
+footer p {
+    margin: 5px 0;
+}
