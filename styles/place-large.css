@@ -17,7 +17,7 @@
     object-position: center;
   }
 
-  /* FLOATING CARDS — fixed size */
+  /* FLOATING CARDS*/
   .data-card, .weather-card {
     position: absolute;
     background: white;

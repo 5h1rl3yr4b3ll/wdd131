@@ -11,19 +11,19 @@ document.getElementById('lastModified').textContent = `Last Modified: ${lastModi
 
 // --- Wind Chill Implementation ---
 
-// 1. Define static variables (REQUIRED)
+// 1. Define static variables
 // Metric: Temperature in °C, Wind Speed in km/h
 const tempC = 25; // Static Temperature
 const speedKmh = 8;  // Static Wind Speed
 
-// 2. Write the calculateWindChill function (Metric Formula) (REQUIRED)
+// 2. Write the calculateWindChill function (Metric Formula)
 // Formula: T_wc = 13.12 + 0.6215*T - 11.37*V^0.16 + 0.3965*T*V^0.16
 function calculateWindChill(T, V) {
     // The calculation in a single line (REQUIRED)
     return (13.12 + (0.6215 * T) - (11.37 * Math.pow(V, 0.16)) + (0.3965 * T * Math.pow(V, 0.16)));
 }
 
-// 3. Logic to check conditions and display result (REQUIRED)
+// 3. Logic to check conditions and display result
 const windChillElement = document.getElementById('windchill-display');
 
 // Viable Wind Chill Conditions (Metric): Temperature <= 10 °C AND Wind speed > 4.8 km/h
@@ -34,6 +34,6 @@ if (tempC <= 10 && speedKmh > 4.8) {
     // Display result rounded to one decimal place
     windChillElement.textContent = `${windChillFactor.toFixed(1)} °C`;
 } else {
-    // Conditions not met, display "N/A" (Not Applicable)
+    // Conditions not met, display "N/A"
     windChillElement.textContent = "N/A";
 }
