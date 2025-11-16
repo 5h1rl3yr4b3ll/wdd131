@@ -32,7 +32,7 @@
   
   /* LEFT CARD — DATA */
   .data-card {
-    top: 100px;
+    top: 150px;
     left: 250px; 
     font-size: 0.8rem;
   }
@@ -67,4 +67,12 @@
   height: 30px;
   vertical-align: middle; 
 }
+
+.country-tag::after {
+    content: " 🇲🇽"; /* Adds a subtle flag icon to the country title */
+    margin-left: 10px;
+    font-size: 1.2em;
+    display: inline-block;
+  }
+
 }

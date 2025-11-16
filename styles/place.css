@@ -1,17 +1,17 @@
 /* Global CSS Variables (REQUIRED) */
 :root {
-  --primary-color: #006847; /* Deep Green, Mexico flag color */
-  --secondary-color: #73452d; /* Brown/Earth Tone for accents */
-  --accent-color: #ce1126; /* Red, Mexico flag color */
-  --text-dark: #333;
-  --text-light: white;
+  --primary-color: rgb(0,104,71); /* Deep Green, Mexico flag color */
+  --secondary-color: rgb(115,69,45); /* Brown/Earth Tone for accents */
+  --accent-color: rgb(206,17,38); /* Red, Mexico flag color */
+  --text-dark: rgb(51,51,51);
+  --text-light: rgb(255,255,255);
   --max-width: 840px;
   --font-family: 'Inter', sans-serif;
 }
 
 body {
     font-family: var(--font-family);
-    background-color: #f4f4f4;
+    background-color: rgb(244,244,244);
     color: var(--text-dark);
 }
 
@@ -77,9 +77,6 @@ header {
     font-size: 1rem;
 }
 
-.data-grid p:nth-child(odd), .weather-grid p:nth-child(odd) {
-    font-weight: 600;
-}
 
 /* Mobile Weather Icon (SVG) Styling */
 .weather-icon-mobile {
@@ -92,7 +89,7 @@ header {
 /* Footer Styling */
 footer {
     background-color: var(--primary-color);
-    color: #ccc;
+    color: rgb(204,204,204);
     text-align: center;
     font-size: 0.9rem;
     padding: 15px 0;
