@@ -1,0 +1,25 @@
+/* --- NAVIGATION OVERRIDE --- */
+.hamburger-menu {
+    display: none; /* Desktop: hide hamburger button */
+}
+
+nav {
+    display: flex; 
+    flex-direction: row;     
+    position: static;      
+    width: auto;              
+    background-color: transparent; 
+    box-shadow: none;
+}
+
+nav a {
+    border-top: none; /* Remove mobile border */
+    /* Set background-color to transparent to show the header's background */
+    background-color: transparent; 
+}
+
+/* --- CSS GRID OVERRIDE --- */
+.figure-grid {
+    /* Change image grid to 3 columns on desktop screens */
+    grid-template-columns: repeat(3, 1fr);
+}
