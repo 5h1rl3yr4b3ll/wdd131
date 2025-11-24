@@ -98,8 +98,8 @@ ul li:before {
     text-align: center;
     flex: 1;
     min-width: 200px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    color: white;
+    box-shadow: 0 2px 5px #0000001a;
+    color: #ffffff;
 }
 
 .swatch p {
@@ -160,7 +160,7 @@ ul li:before {
     max-width: 150px;
     height: auto;
     border-radius: 50%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px #0000001a;
 }
 
 /* Table for Scenarios/Tech Specs */
