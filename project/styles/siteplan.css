@@ -1,0 +1,185 @@
+/* Global Reset */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Color and Typography Definitions */
+:root {
+    --color-primary: #8C485A;     /* Muted Rose/Blush - Used for headings */
+    --color-secondary: #F7F5F0;   /* Creamy Off-White - Used for background */
+    --color-accent: #B28F50;      /* Soft Gold - Used for accents/borders */
+    --color-text: #333333;        /* Dark text for readability */
+    --font-serif: 'Playfair Display', Georgia, serif; /* Elegant heading font */
+    --font-sans: 'Lato', Arial, sans-serif; /* Clean body font */
+    --max-width: 900px;
+}
+
+body {
+    font-family: var(--font-sans);
+    line-height: 1.7;
+    color: var(--color-text);
+    background-color: var(--color-secondary);
+    padding: 20px;
+}
+
+/* Container for content centering */
+.plan-container {
+    width: 95%;
+    max-width: var(--max-width);
+    margin: 20px auto;
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px #0000001a;
+    border-top: 6px solid var(--color-primary); /* Accent line */
+}
+
+/* Typography */
+h1 {
+    font-family: var(--font-serif);
+    color: var(--color-primary);
+    font-size: 2.8em;
+    text-align: center;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+h2 {
+    font-family: var(--font-serif);
+    color: var(--color-accent);
+    font-size: 1.8em;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    border-left: 5px solid var(--color-accent);
+    padding-left: 15px;
+}
+
+h3 {
+     font-family: var(--font-serif);
+     color: var(--color-primary);
+     font-size: 1.3em;
+     margin-top: 20px;
+     margin-bottom: 10px;
+}
+
+p, ul, table {
+    margin-bottom: 15px;
+}
+
+/* List Styling */
+ul {
+    list-style: none;
+    padding-left: 20px;
+}
+ul li:before {
+    content: "•";
+    color: var(--color-accent); 
+    font-weight: bold;
+    display: inline-block; 
+    width: 1em;
+    margin-left: -1em;
+}
+
+/* Color Schema and Typography Display Boxes */
+.color-sample, .font-sample {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.swatch {
+    padding: 15px;
+    border-radius: 6px;
+    min-width: 150px;
+    text-align: center;
+    flex: 1;
+    min-width: 200px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    color: white;
+}
+
+.swatch p {
+    font-weight: bold;
+    margin-bottom: 0;
+    font-size: 0.9em;
+}
+.swatch small {
+    opacity: 0.8;
+    font-size: 0.8em;
+}
+
+.primary-swatch { background-color: var(--color-primary); }
+.secondary-swatch { background-color: var(--color-secondary); color: var(--color-text); border: 1px solid #ddd; }
+.accent-swatch { background-color: var(--color-accent); }
+
+.font-example {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 6px;
+    flex: 1;
+    min-width: 250px;
+}
+.font-example.serif h4 { font-family: var(--font-serif); font-size: 1.5em; color: var(--color-primary); }
+.font-example.sans h4 { font-family: var(--font-sans); font-size: 1.5em; color: var(--color-accent); }
+
+/* Wireframe Styling */
+.wireframe-section {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.wireframe-box {
+    border: 2px dashed #ccc;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+.wireframe-box h4 {
+    font-family: var(--font-serif);
+    color: var(--color-primary);
+    margin-bottom: 15px;
+}
+
+/* New Logo Display Styles for Site Plan */
+.logo-display {
+    text-align: center;
+    margin: 20px 0;
+    padding: 15px;
+    background-color: #fcfcfc;
+    border: 1px dashed var(--color-accent);
+    border-radius: 8px;
+}
+.plan-logo {
+    max-width: 150px;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Table for Scenarios/Tech Specs */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+th, td {
+    border: 1px solid #eee;
+    padding: 12px;
+    text-align: left;
+}
+th {
+    background-color: var(--color-primary);
+    color: white;
+    font-family: var(--font-sans);
+    font-weight: 700;
+}
+tr:nth-child(even) {
+    background-color: #fcfcfc;
+}
