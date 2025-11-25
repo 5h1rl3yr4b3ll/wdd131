@@ -7,8 +7,8 @@
 
 /* Color and Typography Definitions */
 :root {
-    --color-primary: #8C485A;     /* Muted Rose/Blush - Used for headings */
-    --color-secondary: #F7F5F0;   /* Creamy Off-White - Used for background */
+    --color-primary: #004C54;     /* Deep Teal - Used for headings */
+    --color-secondary: #FAF8F4;   /* Cream White/Sand - Used for background */
     --color-accent: #B28F50;      /* Soft Gold - Used for accents/borders */
     --color-text: #333333;        /* Dark text for readability */
     --font-serif: 'Playfair Display', Georgia, serif; /* Elegant heading font */
@@ -29,7 +29,7 @@ body {
     width: 95%;
     max-width: var(--max-width);
     margin: 20px auto;
-    background-color: #ffffff;
+    background-color: white;
     padding: 40px;
     border-radius: 12px;
     box-shadow: 0 8px 20px #0000001a;
@@ -112,9 +112,10 @@ ul li:before {
     font-size: 0.8em;
 }
 
-.primary-swatch { background-color: var(--color-primary); }
-.secondary-swatch { background-color: var(--color-secondary); color: var(--color-text); border: 1px solid #ddd; }
-.accent-swatch { background-color: var(--color-accent); }
+/* Updated Swatches */
+.primary-swatch { background-color: var(--color-primary); } /* Deep Teal */
+.secondary-swatch { background-color: var(--color-secondary); color: var(--color-text); border: 1px solid #ddd; } /* Cream White */
+.accent-swatch { background-color: var(--color-accent); } /* Soft Gold */
 
 .font-example {
     border: 1px solid #ddd;
@@ -146,6 +147,21 @@ ul li:before {
     color: var(--color-primary);
     margin-bottom: 15px;
 }
+
+/* Specific styles for the mock wireframe content (moved from inline style) */
+.mobile-frame, .desktop-frame {
+    margin-top: 15px; 
+    padding: 10px; 
+}
+
+.mobile-frame {
+    border: 1px dashed var(--color-primary); /* Primary color border for Mobile view */
+}
+
+.desktop-frame {
+    border: 1px dashed var(--color-accent); /* Accent color border for Desktop view */
+}
+
 
 /* New Logo Display Styles for Site Plan */
 .logo-display {
