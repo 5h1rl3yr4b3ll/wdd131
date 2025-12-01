@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Confirmation</title>
+    <meta name="description" content="Product Review Submission Confirmation">
+    <meta name="author" content="Shirley Rabell">  
+    
+    <link rel="stylesheet" href="styles/form.css"> 
+    <link rel="stylesheet" href="styles/form-large.css" media="screen and (min-width: 992px)">
+
+    <script src="scripts/form.js" defer></script> 
+    
+    <script>
+        // Use an anonymous function to run the review page logic once the DOM is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            
+            // 1. Handle LocalStorage Review Counter
+            let reviewCount = localStorage.getItem('reviewCount');
+
+            // Initialize or increment the counter
+            if (reviewCount) {
+                reviewCount = parseInt(reviewCount) + 1;
+            } else {
+                reviewCount = 1;
+            }
+
+            // Save the new count back to localStorage
+            localStorage.setItem('reviewCount', reviewCount);
+
+            // Display the counter to the user
+            document.getElementById('reviewCounter').textContent = reviewCount;
+
+
+            // 2. Display Form Submission Data (Optional but highly recommended for a confirmation page)
+            const urlParams = new URLSearchParams(window.location.search);
+            const confirmationDetails = document.getElementById('confirmationDetails');
+            
+            let htmlContent = '<h2>Thank you for your review!</h2>';
+            htmlContent += '<p>We appreciate your feedback. Here are the details of your submission:</p>';
+            htmlContent += '<table>';
+            
+            // Loop through all submitted parameters
+            for (const [key, value] of urlParams.entries()) {
+                let formattedKey = key.replace(/([A-Z])/g, ' $1'); // Add space before capital letters
+                formattedKey = formattedKey.charAt(0).toUpperCase() + formattedKey.slice(1); // Capitalize first letter
+
+                // Skip the default feature name for now, we'll handle it below
+                if (key === 'feature') continue; 
+                
+                htmlContent += `<tr><td><strong>${formattedKey}:</strong></td><td>${value}</td></tr>`;
+            }
+
+            // Handle the 'feature' checkboxes, which can have multiple values
+            const usefulFeatures = urlParams.getAll('feature');
+            if (usefulFeatures.length > 0) {
+                htmlContent += `<tr><td><strong>Useful Features:</strong></td><td>${usefulFeatures.join(', ')}</td></tr>`;
+            }
+
+            // Handle the product name display using the ID (requires the products array to look up the name)
+            const productId = urlParams.get('productName');
+            if (productId) {
+                // NOTE: We need the 'products' array from form.js to be available here, or redefined. 
+                // Since this script runs after form.js (due to 'defer' on form.js), the 'products' array 
+                // *should* be in the global scope if form.js defines it without 'const' or if it's redefined here.
+                // For simplicity and to avoid global scope issues, we'll redefine the minimum product array needed for lookup.
+                const products = [
+                    { id: "fc-1888", name: "Flux Capacitor" },
+                    { id: "fc-2050", name: "Power Laces" },
+                    { id: "fs-1987", name: "Time Circuits" },
+                    { id: "ac-2000", name: "Low Voltage Reactor" },
+                    { id: "jj-1969", name: "Warp Equalizer" }
+                ];
+                
+                const product = products.find(p => p.id === productId);
+                if (product) {
+                    // Replace the raw ID with the human-readable name
+                    htmlContent = htmlContent.replace(`<td>${productId}</td>`, `<td>${product.name}</td>`);
+                }
+            }
+
+
+            htmlContent += '</table>';
+            confirmationDetails.innerHTML = htmlContent;
+        });
+
+    </script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <header>
+        <h1>Review Confirmation</h1>
+    </header>
+    
+    
+<main>
+    <div id="confirmationDetails">
+        </div>
+
+    <div class="counter-box">
+        <h3>Client Review Counter</h3>
+        <p>This is the **<span id="reviewCounter">0</span>** time you have submitted a review from this device.</p>
+        <p class="small-text">(This counter uses the browser's `localStorage`.)</p>
+    </div>
+</main>
+    
+    <footer>
+        <p><span id="currentyear"></span></p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 - Product Review Form - Shirley Anahi Rabell Magaña</title>
+    <meta name="description" content="WDD 131 - Shirley Rabell Product Review Form page">
+    <meta name="author" content="Shirley Rabell">  
+    <link rel="stylesheet" href="styles/form.css"> 
+    <link rel="stylesheet" href="styles/form-large.css" media="screen and (min-width: 992px)">
+    
+    <script src="scripts/form.js" defer></script> 
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <header>
+        <h1>Product Review</h1>
+    </header>
+    
+    
+<main>
+    <h1>Product Review Application</h1>
+        <form method="get" action="review.html" class="wf1">
+            <fieldset>
+                <legend>Review Information</legend>
+                
+                <label for="productName">Product Name
+                    <select id="productName" name="productName" required>
+                        <option value="" selected disabled>Choose a Product...</option>
+                        </select>
+                </label>
+                
+                <div class="rating-group">
+                    <label>Overall Rating</label>
+                    <div class="radio-buttons">
+                        <label for="rating1"><input type="radio" id="rating1" name="overallRating" value="1" required> ⭐ 1</label>
+                        <label for="rating2"><input type="radio" id="rating2" name="overallRating" value="2"> ⭐⭐ 2</label>
+                        <label for="rating3"><input type="radio" id="rating3" name="overallRating" value="3"> ⭐⭐⭐ 3</label>
+                        <label for="rating4"><input type="radio" id="rating4" name="overallRating" value="4"> ⭐⭐⭐⭐ 4</label>
+                        <label for="rating5"><input type="radio" id="rating5" name="overallRating" value="5"> ⭐⭐⭐⭐⭐ 5</label>
+                    </div>
+                </div>
+
+                <label for="installationDate">Date of Installation <input type="date" id="installationDate" name="installationDate" required></label>
+            
+                <div class="checkbox-group">
+                    <label>Which features did you find useful in the product? (Check all that apply)</label>
+                    <label for="featureDurability"><input type="checkbox" id="featureDurability" name="feature" value="Durability"> Durability </label>
+                    <label for="featureEasyUse"><input type="checkbox" id="featureEasyUse" name="feature" value="Ease of Use"> Ease of Use </label>
+                    <label for="featurePerformance"><input type="checkbox" id="featurePerformance" name="feature" value="Performance"> Performance </label>
+                    <label for="featureDesign"><input type="checkbox" id="featureDesign" name="feature" value="Design"> Design </label>
+                </div>
+            
+                <label for="review">Written Review (Optional)
+                    <textarea id="review" name="review" rows="4"></textarea>
+                </label>
+                
+                <label for="userName">Your Name (Optional)<input type="text" id="userName" name="userName"></label>
+            </fieldset>
+
+        <input type="submit" value="Post Review">
+        </form>
+
+    </main>
+    
+    <footer>
+        <p><span id="currentyear"></span></p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>

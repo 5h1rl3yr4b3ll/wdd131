@@ -1,0 +1,78 @@
+@media screen and (min-width: 992px) {
+
+  /*full width and centered image */
+  .hero {
+    position: relative;
+    margin-bottom: 0;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .hero picture,
+  .hero img {
+    width: 100%;
+    display: block;
+    height: 520px;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  /* FLOATING CARDS*/
+  .data-card, .weather-card {
+    position: absolute;
+    background: white;
+    opacity: 0.97;
+    padding: 15px; 
+    width: 230px; 
+    height: auto; /* Allows content to define height */
+    border-radius: 1px;
+    box-shadow: 4px 4px 12px rgba(0,0,0,0.25);
+    text-align: center; /* Centers the H2 and IMG block horizontally */
+  }
+  
+  /* LEFT CARD — DATA */
+  .data-card {
+    top: 150px;
+    left: 250px; 
+    font-size: 0.8rem;
+  }
+
+  /* RIGHT CARD — WEATHER */
+  .weather-card {
+    top: 300px;
+    right: 250px;
+    font-size: 0.8rem;
+  }
+
+  .data-grid, .weather-grid {
+    /* Sets the label column to 100px and the value column to the rest (1fr) */
+    grid-template-columns: 100px 1fr; 
+    font-size: 0.8rem;
+    gap: 2px 5px; 
+    text-align: left; /* Override card center alignment for the grid details */
+    margin: 0 auto; /* Center the grid inside the card */
+  }
+  
+  
+  /* Set heading and icon to display inline so they sit on the same line */
+  .weather-heading {
+    display: inline;
+    margin-right: 5px; /* Space between text and icon */
+  }
+
+  /* Make the icon visible, size it, and align it */
+  .weather-icon-mobile {
+  display: inline; 
+  width: 30px; /* This is the new, smaller size for desktop */
+  height: 30px;
+  vertical-align: middle; 
+}
+
+.country-tag::after {
+    content: " 🇲🇽"; /* Adds a subtle flag icon to the country title */
+    margin-left: 10px;
+    font-size: 1.2em;
+    display: inline-block;
+  }
+
+}
