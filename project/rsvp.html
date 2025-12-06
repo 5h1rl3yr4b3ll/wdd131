@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RSVP | Shirley & Gilberto: The Next Chapter</title>
+    <meta name="description" content="RSVP form for Shirley and Gilberto's wedding using local storage for data capture.">
+    <script src="scripts/main.js" defer></script>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <header>
+        <div class="header-container">
+            <img src="images/logoShirleyGilbertov3.webp" alt="Shirley & Gilberto Wedding Monogram Logo" class="site-logo">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Love Story</a></li>
+                    <li><a href="details.html">Details</a></li>
+                    <li><a href="gifts.html">Registry</a></li>
+                    <li><a href="rsvp.html" class="cta-button active">RSVP</a></li> 
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="plan-container">
+        
+        <h1>Confirm Your Attendance</h1>
+        <p>Please submit your RSVP by the final deadline to ensure we can accommodate you and your party.</p>
+        
+        <section class="rsvp-form-section">
+            <h2>Guest Information</h2>
+            
+            <form id="rsvpForm">
+                
+                <fieldset>
+                    <legend>Contact Information</legend>
+                    <label for="fullName">Full Name:</label>
+                    <input type="text" id="fullName" name="fullName" required>
+                    
+                    <label for="partySize">Party Size (including yourself):</label>
+                    <input type="number" id="partySize" name="partySize" min="1" max="6" required>
+                </fieldset>
+                
+                <fieldset>
+                    <legend>Attendance</legend>
+                    <input type="radio" id="attendingYes" name="attendance" value="Attending" required>
+                    <label for="attendingYes">Joyfully Attending</label><br>
+                    
+                    <input type="radio" id="attendingNo" name="attendance" value="Declining">
+                    <label for="attendingNo">Regretfully Declining</label>
+                </fieldset>
+                
+                <fieldset>
+                    <legend>Meal Preference & Restrictions</legend>
+                    <label for="mealChoice">Select your main course:</label>
+                    <select id="mealChoice" name="mealChoice">
+                        <option value="">-- Select One --</option>
+                        <option value="chicken">Roasted Chicken</option>
+                        <option value="fish">Seared Fish</option>
+                        <option value="vegetarian">Vegetarian Risotto</option>
+                    </select>
+                    
+                    <label for="dietaryRestrictions">Dietary Restrictions/Allergies:</label>
+                    <textarea id="dietaryRestrictions" name="dietaryRestrictions" rows="3" placeholder="e.g., Gluten-Free, Nut Allergy"></textarea>
+                </fieldset>
+
+                <button type="submit" class="cta-button submit-button">
+                    Submit RSVP
+                </button>
+            </form>
+        </section>
+        
+    </main>
+
+    <footer>
+        <p><span id="currentyear"></span></p>
+        <p>Final Deadline to RSVP: 31 Dec 2026</p>
+        <p id="lastModified"></p>
+        
+    </footer>
+
+</body>
+</html>

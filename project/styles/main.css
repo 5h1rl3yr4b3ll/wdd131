@@ -1,0 +1,428 @@
+/*==================================
+  GLOBAL STYLES & VARIABLES
+==================================*/
+
+/* Color and Typography Definitions */
+:root {
+     --color-primary: #004C54;     /* Deep Teal - Used for headings */
+    --color-secondary: #FAF8F4;   /* Cream White/Sand - Used for background */
+    --color-accent: #B28F50;      /* Soft Gold - Used for accents/borders */
+    --color-text: #333333;        /* Dark text for readability */
+    --font-serif: 'Playfair Display', Georgia, serif; /* Elegant heading font */
+    --font-sans: 'Lato', Arial, sans-serif; /* Clean body font */
+    --max-width: 900px;
+}
+
+* Global Reset and Body Styling */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-sans);
+    line-height: 1.6;
+    color: var(--color-text-dark);
+    background-color: var(--color-background);
+}
+
+main {
+    width: 90%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 30px 0;
+}
+
+h1, h2, h3 {
+    font-family: var(--font-serif);
+    margin-bottom: 0.5em;
+}
+
+/* Typography Usage */
+h1 {
+    color: var(--color-primary);
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+h2 {
+    color: var(--color-accent);
+    font-size: 1.8rem;
+    padding-top: 15px;
+}
+h3 {
+    color: var(--color-primary);
+    font-size: 1.3rem;
+}
+
+p, ul, ol {
+    margin-bottom: 1em;
+}
+
+/* Link Styling */
+a {
+    color: var(--color-primary);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+a:hover {
+    color: var(--color-accent);
+    text-decoration: underline;
+}
+
+/* Call-to-Action (CTA) Button Styling (Coral/Sunset Accent) */
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: var(--color-accent);
+    color: #ffffff !important;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.1s;
+    border: none;
+    cursor: pointer;
+}
+.cta-button:hover {
+    background-color: #004C54; 
+    text-decoration: none;
+    transform: translateY(-1px);
+}
+
+
+/*==================================
+  HEADER & NAVIGATION
+==================================*/
+
+header {
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px #0000001a;
+    padding: 10px 0;
+    border-bottom: 3px solid var(--color-primary);
+}
+
+.header-container {
+    width: 90%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-logo {
+    max-height: 120px; /* Adjust size of the monogram logo */
+    border-radius: 60%;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    text-transform: uppercase;
+    font-size: 0.95rem;
+    font-weight: 500;
+    padding: 5px 0;
+    border-bottom: 2px solid transparent;
+}
+
+nav a.active {
+    color: var(--color-accent);
+    border-bottom: 2px solid var(--color-accent);
+}
+
+
+/*==================================
+  INDEX.HTML (LOVE STORY)
+==================================*/
+
+.hero-image-placeholder {
+    background-color: #d1e2e6;
+    height: 400px;
+    margin-bottom: 30px;
+    position: relative; /* Essential for positioning the text */
+    overflow: hidden; /* Important for the image fit */
+}
+
+.hero-actual-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image fills the container without distortion */
+    display: block;
+}
+
+.hero-text {
+    /* Positioning the text over the image */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the text perfectly */
+
+    background-color: #ffffffe6;
+    padding: 20px 40px;
+    border-radius: 8px;
+    border: 1px solid var(--color-primary);
+}
+
+.hero-text h1, .hero-text h2 {
+    margin: 0;
+}
+.date-location {
+    font-style: italic;
+    font-weight: bold;
+    color: var(--color-text-dark);
+}
+
+/* Story Blocks for Alternating Layout (Desktop Wireframe) */
+.story-block {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 50px;
+}
+
+.story-text, .story-image-placeholder {
+    flex: 1;
+}
+
+.story-image-placeholder {
+    background-color: #f0f0f0;
+    height: 300px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Placeholder text */
+    color: #999; 
+    font-style: italic;
+}
+
+/* Reorder for the Proposal Story (Text Left, Image Right) */
+.proposal-story {
+    flex-direction: row-reverse;
+}
+
+
+.rsvp-cta-section {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: var(--color-background);
+    border-top: 1px dashed #ccc;
+    border-bottom: 1px dashed #ccc;
+}
+.large-button {
+    font-size: 1.1rem;
+    padding: 15px 30px;
+}
+
+
+/*==================================
+  RSVP.HTML (FORM)
+==================================*/
+
+.rsvp-form-section {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px #0000000d;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+fieldset {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+legend {
+    font-family: var(--font-serif);
+    color: var(--color-primary);
+    font-size: 1.1em;
+    padding: 0 10px;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+input[type="text"], input[type="number"], select, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: var(--font-sans);
+    font-size: 1rem;
+}
+
+input[type="radio"], input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.submit-button {
+    align-self: flex-start;
+    margin-top: 10px;
+}
+
+
+/*==================================
+  DETAILS.HTML (VENUE & LOGISTICS)
+==================================*/
+
+.venue-location, .accommodations {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 5px #0000000d;
+}
+
+.map-embed {
+    margin-top: 20px;
+}
+
+.map-embed iframe {
+    max-width: 100%;
+    border-radius: 6px;
+}
+
+/* Specific list style for accommodations */
+.accommodations ul {
+    list-style: none;
+    padding-left: 0;
+}
+.accommodations li {
+    background-color: var(--color-background);
+    padding: 15px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    border-left: 5px solid var(--color-accent);
+}
+
+
+/*==================================
+  GIFTS.HTML (REGISTRY & DYNAMIC GRID)
+==================================*/
+
+.registry-filters {
+    text-align: center;
+    padding: 20px 0;
+    margin-bottom: 20px;
+    border-bottom: 1px dashed #ccc;
+}
+
+.filter-menu-links {
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.filter-link {
+    padding: 8px 15px;
+    border: 1px solid var(--color-primary);
+    border-radius: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.filter-link:hover, .filter-link.active {
+    background-color: var(--color-accent);
+    color: #ffffff !important;
+    border-color: var(--color-accent);
+    text-decoration: none;
+}
+
+/* Grid for Dynamically Rendered Gift Cards */
+.featured-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.gift-card {
+    background-color: #ffffff;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px #0000000d;
+    text-align: center;
+}
+
+.gift-card img {
+    width: 100%;
+    height: 200px; 
+    object-fit: cover;
+    display: block;
+}
+
+.gift-card figcaption {
+    padding: 15px;
+}
+
+.gift-card figcaption h3 {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.registry-link {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    padding: 8px 15px;
+}
+
+
+/*==================================
+  FOOTER
+==================================*/
+
+footer {
+    background-color: var(--color-primary);
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    font-size: 0.9rem;
+}
+footer p {
+    margin: 5px 0;
+}
+
+/* Mobile adjustment for story blocks */
+@media (max-width: 768px) {
+    .story-block {
+        flex-direction: column; /* Stack vertically on small screens */
+    }
+    .proposal-story {
+        flex-direction: column; /* Ensure all stacks are consistent */
+    }
+
+    .header-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    nav ul {
+        padding-top: 10px;
+        justify-content: center;
+    }
+    nav li:last-child {
+        margin-left: 0;
+    }
+}
