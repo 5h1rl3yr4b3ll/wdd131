@@ -39,35 +39,35 @@ const giftList = [
         category: "Kitchen",
         store: "Crate & Barrel",
         price: 350,
-        imageUrl: "images/gifts/espresso_maker.webp"
+        imageUrl: "https://m.media-amazon.com/images/I/61Sb0dHB73L._AC_UL320_.jpg"
     },
     {
         itemName: "Cash Fund Contribution",
         category: "Honeymoon",
         store: "Honeymoon Fund",
         price: 50,
-        imageUrl: "images/gifts/honeymoon_fund.webp"
+        imageUrl: "https://plus.unsplash.com/premium_photo-1661756642433-2b63cf1bd2a9?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
         itemName: "High-Quality Luggage Set",
         category: "Travel",
         store: "Amazon",
         price: 450,
-        imageUrl: "images/gifts/luggage_set.webp"
+        imageUrl: "https://m.media-amazon.com/images/I/91z+f3HQTSL._AC_UL320_.jpg"
     },
     {
         itemName: "Ocean Blue Dinnerware Set",
         category: "Kitchen",
         store: "Crate & Barrel",
         price: 200,
-        imageUrl: "images/gifts/dinnerware.webp"
+        imageUrl: "https://m.media-amazon.com/images/I/81Psau7eWzL._AC_SX342_.jpg"
     },
     {
         itemName: "Smart Home Assistant",
         category: "Home Tech",
         store: "Amazon",
         price: 150,
-        imageUrl: "images/gifts/smart_assistant.webp"
+        imageUrl: "https://m.media-amazon.com/images/I/51ekoxLm0LL._AC_SX679_.jpg"
     }
 ];
 
@@ -206,9 +206,7 @@ function setupRsvpListener() {
 
 // Run all setup functions once the entire page is loaded
 document.addEventListener('DOMContentLoaded', () => {
-    // Utility
-    getDates();
-    
+      
     // Gifts page setup
     renderGifts(giftList);
     setupGiftFilters();
