@@ -178,7 +178,6 @@ function handleRsvpSubmission(event) {
     try {
         localStorage.setItem('weddingRSVPs', JSON.stringify(guests));
         
-        // Success feedback (using a template literal for descriptive output)
         alert(`RSVP Submitted! Thank you, ${guestData.name}. 
 Your party size of ${guestData.partySize} is confirmed as ${guestData.attendance}.
 (Data stored locally in weddingRSVPs array)`);

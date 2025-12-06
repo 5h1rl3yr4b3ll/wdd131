@@ -411,6 +411,9 @@ footer p a {
     color: #ffffff;
 }
 
+
+
+
 /* Mobile adjustment for story blocks */
 @media (max-width: 768px) {
     .story-block {
